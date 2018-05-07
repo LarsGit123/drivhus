@@ -3,6 +3,6 @@ import time
 import Adafruit_DHT
 import sys
 
-hum, temp= Adafruit_DHT.read_retry(11,4)
+hum, temp= Adafruit_DHT.read_retry(11, 19)
 print "temp:   "+str(temp)
 print "hum:   "+str(hum)
