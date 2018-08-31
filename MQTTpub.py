@@ -1,8 +1,8 @@
 import paho.mqtt.client as mqtt
 
-def MqttPub(msg, topic):
-    client= mqtt.Client("at16")
-    client.connect("192.168.1.237")
+def MqttPub(msg, topic, ip, clientName="at16"):
+    client= mqtt.Client(clientName)
+    client.connect(ip)
     print("connected")    
     client.publish(topic, msg)
     print("publish: " + msg + " to " + topic)
